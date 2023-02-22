@@ -66,3 +66,65 @@ Content-Type: application/json
 
 ###
 GET http://localhost:9000/api/actors  HTTP/1.1
+
+
+###
+GET http://localhost:9000/api/actors/1 HTTP/1.1
+
+
+###
+PUT http://localhost:9000/api/actors/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    
+   "act_id": 1,
+    "act_fname": "Jhorge",
+    "act_lname": "Clouni",
+    "act_gender": "M"
+}
+
+
+###
+DELETE http://localhost:9000/api/actors/3 HTTP/1.1
+
+
+######################################
+# PETICIONES PARA LA TABLA DIRECTORS #
+######################################
+
+
+###
+POST http://localhost:9000/api/directors HTTP/1.1
+Content-Type: application/json
+
+{
+    "dir_id": 4,
+    "dir_fname": "Juan",
+    "dir_lname": "Torres"
+    
+}
+
+
+###
+GET http://localhost:9000/api/directors  HTTP/1.1
+
+
+###
+GET http://localhost:9000/api/directors/1 HTTP/1.1
+
+
+###
+PUT http://localhost:9000/api/directors/4 HTTP/1.1
+Content-Type: application/json
+
+{
+    
+   "dir_id": 3,
+    "dir_fname": "Juan",
+    "dir_lname": "Torrez"
+}
+
+
+###
+DELETE http://localhost:9000/api/directors/4 HTTP/1.1

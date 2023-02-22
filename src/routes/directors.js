@@ -1,13 +1,13 @@
 const express = require("express");
-//estamos importando la tabla movies
-const actorsSchema = require("../models/actors");
+//estamos importando la tabla directors
+const directorsSchema = require("../models/directors");
 
 const router = express.Router();
 
-// create actor
-router.post('/actors', (req, res) => {
-    const actor = actorsSchema(req.body);
-    actor 
+// create director
+router.post('/directors', (req, res) => {
+    const director = directorsSchema(req.body);
+    director
     .save()
     // en esta linea de abajo tenemos una promesa 
     .then((data) => res.json(data))
@@ -17,9 +17,9 @@ router.post('/actors', (req, res) => {
 });
 
 
-//get all actors
-router.get('/actors', (req, res) => {
-    actorsSchema
+//get all directors
+router.get('/directors', (req, res) => {
+    directorsSchema
     .find()
     .then((data) => res.json(data))
     .catch((error) => res.json({message:error}));
@@ -27,33 +27,33 @@ router.get('/actors', (req, res) => {
 });
 
 
-//get a actor
-router.get("/actors/:id", (req, res) => {
+//get a director
+router.get("/directors/:id", (req, res) => {
     const { id } = req.params;
-    actorsSchema
-      .findOne({ act_id: id })
+    directorsSchema
+      .findOne({ dir_id: id })
       .then((data) => res.json(data))
       .catch((error) => res.json({ message: error }));
   });
 
 
- //update a actor
-router.put('/actors/:id', (req, res) => {
+ //update a director
+router.put('/directors/:id', (req, res) => {
     const { id } = req.params;
-    const {act_id, act_fname, act_lname, act_gender } = req.body;
-    actorsSchema
-    .updateOne({act_id:id}, { $set: {act_id, act_fname, act_lname, act_gender} })
+    const {dir_id, dir_fname, dir_lname} = req.body;
+    directorsSchema
+    .updateOne({dir_id:id}, { $set: {dir_id, dir_fname, dir_lname} })
     .then((data) => res.json(data))
     .catch((error) => res.json({message:error}));
 
 }); 
 
 
-//Delete a actor
-router.delete('/actors/:id', (req, res) =>{
+//Delete a director
+router.delete('/directors/:id', (req, res) =>{
     const { id } = req.params;
-    actorsSchema
-    .remove({act_id: id})
+    directorsSchema
+    .remove({dir_id: id})
     .then((data) => res.json(data))
     .catch((error) => res.json({message:error}));
 }); 
