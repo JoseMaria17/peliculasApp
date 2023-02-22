@@ -1,0 +1,64 @@
+###################################
+# PETICIONES PARA LA TABLA MOVIES #
+###################################
+
+
+###
+POST http://localhost:9000/api/movies HTTP/1.1
+Content-Type: application/json
+
+{
+    "mov_id": 2,
+    "mov_title": "Avatar",
+    "mov_year": 2008,
+    "mov_time": 180,
+    "mov_lang": "ENG",
+    "mov_dt_rel": "09-18-2008",
+    "mov_rel_country": "USA"
+}
+
+
+###
+GET http://localhost:9000/api/movies  HTTP/1.1
+
+
+###
+GET http://localhost:9000/api/movies/1 HTTP/1.1
+
+
+###
+PUT http://localhost:9000/api/movies/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    
+    "mov_id": 1,
+    "mov_title": "Avatar",
+    "mov_year": 2008,
+    "mov_time": 190,
+    "mov_lang": "ENG",
+    "mov_dt_rel": "09-18-2008",
+    "mov_rel_country": "USA"
+}
+
+
+###
+DELETE http://localhost:9000/api/movies/1 HTTP/1.1
+
+
+###################################
+# PETICIONES PARA LA TABLA ACTORS #
+###################################
+
+
+###
+POST http://localhost:9000/api/actors HTTP/1.1
+Content-Type: application/json
+
+{
+    "act_id": 1,
+    "act_fname": "Jhorge",
+    "act_lname": "Cloune",
+    "act_gender": "M"
+
+}
