@@ -4,7 +4,7 @@ const moviesSchema = require("../models/movies");
 
 const router = express.Router();
 
-// create user
+// create movie
 router.post('/movies', (req, res) => {
     const movie = moviesSchema(req.body);
     movie 
@@ -17,7 +17,7 @@ router.post('/movies', (req, res) => {
 });
 
 
-//get all users
+//get all movie
 router.get('/movies', (req, res) => {
     moviesSchema
     .find()
@@ -27,7 +27,7 @@ router.get('/movies', (req, res) => {
 });
 
 
-//get a users
+//get a movie
 router.get("/movies/:id", (req, res) => {
     const { id } = req.params;
     moviesSchema
@@ -37,7 +37,7 @@ router.get("/movies/:id", (req, res) => {
   });
 
 
-//update a users
+//update a movie
 router.put('/movies/:id', (req, res) => {
     const { id } = req.params;
     const {mov_id, mov_title, mov_year, mov_time, mov_lang, mov_dt_rel, mov_rel_country } = req.body;
@@ -49,7 +49,7 @@ router.put('/movies/:id', (req, res) => {
 });
 
 
-//Delete a users
+//Delete a movie
 router.delete('/movies/:id', (req, res) => {
     const { id } = req.params;
     moviesSchema

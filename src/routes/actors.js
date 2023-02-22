@@ -16,4 +16,13 @@ router.post('/actors', (req, res) => {
 
 });
 
+//get all actor
+router.get('/actors', (req, res) => {
+    actorsSchema
+    .find()
+    .then((data) => res.json(data))
+    .catch((error) => res.json({message:error}));
+
+});
+
 module.exports = router;
