@@ -1,10 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
-//aqui estamos importando las rutas desde user
+//aqui estamos importando las rutas
 const moviesRoutes = require("./routes/movies");
 const actorsRoutes = require("./routes/actors");
 const directorsRoutes = require("./routes/directors");
+const movie_castRoutes = require("./routes/movie_cast");
+const movie_directionRoutes = require("./routes/movie_direction");
 
 
 const app = express();
@@ -15,6 +17,8 @@ app.use(express.json());
 app.use('/api', moviesRoutes);
 app.use('/api', actorsRoutes);
 app.use('/api', directorsRoutes);
+app.use('/api', movie_castRoutes );
+app.use('/api', movie_directionRoutes );
 
 
 // routes
@@ -24,7 +28,7 @@ app.get("/", (req, res) =>{
 
 // mongodb connection
 mongoose.connect(process.env.MONGODB_URI)
-.then(() => console.log('coneected to mongoDB SUCCEFULL'))
+.then(() => console.log('coneected to mongoDB SUCCESSFULL'))
 .catch((error) => console.error(error));
 
 app.listen(port, () => console.log('serve listening in port', port));
