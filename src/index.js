@@ -4,6 +4,8 @@ require("dotenv").config();
 //aqui estamos importando las rutas desde user
 const moviesRoutes = require("./routes/movies");
 const actorsRoutes = require("./routes/actors");
+const directorsRoutes = require("./routes/directors");
+
 
 const app = express();
 const port = process.env.PORT || 9000;
@@ -12,6 +14,7 @@ const port = process.env.PORT || 9000;
 app.use(express.json());
 app.use('/api', moviesRoutes);
 app.use('/api', actorsRoutes);
+app.use('/api', directorsRoutes);
 
 
 // routes
