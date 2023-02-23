@@ -24,7 +24,7 @@ app.get("/", (req, res) =>{
 
 // mongodb connection
 mongoose.connect(process.env.MONGODB_URI)
-.then(() => console.log('coneected to mongoDB SUCCEFULL'))
+.then(() => console.log('conected to mongoDB SUCCESFULL'))
 .catch((error) => console.error(error));
 
 app.listen(port, () => console.log('serve listening in port', port));
