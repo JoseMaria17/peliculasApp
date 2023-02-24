@@ -1,0 +1,30 @@
+###
+POST http://localhost:9000/api/genres HTTP/1.1
+Content-Type: application/json
+
+{
+    "gen_id": 5,
+    "gen_title": "action"
+    
+}
+
+###
+GET http://localhost:9000/api/genres HTTP/1.1
+
+
+###
+GET http://localhost:9000/api/genres/4 HTTP/1.1
+
+
+###
+PUT http://localhost:9000/api/genres/4 HTTP/1.1
+Content-Type: application/json
+
+{
+    "gen_id": 5,
+    "gen_title": "action"
+}
+
+###
+
+DELETE http://localhost:9000/api/genres/5 HTTP/1.1

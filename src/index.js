@@ -5,6 +5,8 @@ require("dotenv").config();
 const moviesRoutes = require("./routes/movies");
 const actorsRoutes = require("./routes/actors");
 const directorsRoutes = require("./routes/directors");
+const genreRoutes = require("./routes/genres");
+
 
 
 const app = express();
@@ -15,6 +17,7 @@ app.use(express.json());
 app.use('/api', moviesRoutes);
 app.use('/api', actorsRoutes);
 app.use('/api', directorsRoutes);
+app.use('/api', genreRoutes);
 
 
 // routes
