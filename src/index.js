@@ -6,8 +6,8 @@ const moviesRoutes = require("./routes/movies");
 const actorsRoutes = require("./routes/actors");
 const directorsRoutes = require("./routes/directors");
 const genreRoutes = require("./routes/genres");
-
-
+const ratingRoutes = require("./routes/rating");
+const reviewerRoutes = require("./routes/reviewer");
 
 const app = express();
 const port = process.env.PORT || 9000;
@@ -18,6 +18,9 @@ app.use('/api', moviesRoutes);
 app.use('/api', actorsRoutes);
 app.use('/api', directorsRoutes);
 app.use('/api', genreRoutes);
+app.use('/api', ratingRoutes);
+
+
 
 
 // routes
