@@ -64,3 +64,33 @@ Content-Type: application/json
 ###
 
 DELETE http://localhost:9000/api/ratings/2 HTTP/1.1
+
+###
+POST http://localhost:9000/api/reviewer HTTP/1.1
+Content-Type: application/json
+
+{
+    "rev_id": 5,
+    "rev_name": "Rafael charkowski"
+}
+
+###
+GET http://localhost:9000/api/reviewer HTTP/1.1
+
+
+###
+GET http://localhost:9000/api/reviewer/10 HTTP/1.1
+
+
+
+###
+PUT http://localhost:9000/api/reviewer/10 HTTP/1.1
+Content-Type: application/json
+
+{
+  "rev_id": 10,
+    "rev_name": "Maria Davila "
+}
+###
+
+DELETE http://localhost:9000/api/reviewer/10 HTTP/1.1

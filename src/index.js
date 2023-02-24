@@ -19,7 +19,7 @@ app.use('/api', actorsRoutes);
 app.use('/api', directorsRoutes);
 app.use('/api', genreRoutes);
 app.use('/api', ratingRoutes);
-
+app.use('/api', reviewerRoutes);
 
 
 
