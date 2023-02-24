@@ -58,8 +58,8 @@ Content-Type: application/json
 {
 
     "act_id": 2,
-    "act_fname": "Ben",
-    "act_lname": "Aflek",
+    "act_fname": "Henry",
+    "act_lname": "Cavil",
     "act_gender": "M"
 
 }
@@ -80,8 +80,8 @@ Content-Type: application/json
 {
     
     "act_id": 1,
-    "act_fname": "Jhorge",
-    "act_lname": "Clouni",
+    "act_fname": "Jorge",
+    "act_lname": "Cluney",
     "act_gender": "M"
 }
 
